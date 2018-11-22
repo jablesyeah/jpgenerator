@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;    
+}
+body {
+    background-color:rgba(255, 35, 35, 0.42);
+    background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 35, 35, 0.42)), url(Resources/minimalist_tree-wallpaper-1920x1080.jpg);
+
+background-size: cover;
+    background-position: center;
+    height: 120vh;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: 'Tangerine', serif;
+    font-size: 50px;
+    color: #ff5e5e   
+}
+
+p { font-weight: bold; 
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+}
+
+.menu {
+  float:center;
+  width:70%;
+  margin: 0% auto;
+  text-align:center;  
+}
+.menu button {
+    align-content: center;
+    background-color:#ffffff;
+    padding:8px;
+    margin: 7px auto;
+    display:block;
+    width:100%;
+    max-width: 400px;
+    color:black;
+    font-weight: 600;
+    border-radius: 10px
+}
+.menu select {
+    background-color:#fae4e9;
+    font-size: 18px;
+    padding:8px;
+    margin:0 auto;
+    margin-top:7px;
+    display:block;
+    width:60px;
+    color:black;
+    border-radius: 30px
+
+}
+
+.menu button:disabled {
+    background-color:#c6f4c9;
+}
+.main {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+    float:left;
+    width:100%;
+    font-size: 25px;
+}
+.main button {
+    background-color:#ffffff;
+    padding:8px;
+    margin-top:7px;
+    width:120px;
+    color:black;
+    font-weight: 600;
+    border-radius: 10px
+
+}
+.main button:disabled {
+    background-color:#A2BBA5;
+    color:darkgray;
+}
+
+.form select {
+    background-color:#fff;
+    font-size: 18px;
+    padding:6px;
+    margin:0 auto;
+    display:block;
+    width:60px;
+    height: 50px;
+    color:black;
+    border-radius: 10px
+}
+
+.resultsTable {
+    padding-bottom: 20px;
+}
+
+.resultsTable, th{
+    background-color: rgba(0, 0, 0, 0.22);
+    margin:0 auto;
+    padding: 5px 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-weight: bold; 
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+}
+
+
+.resultsTable .correct {
+    background-color: rgba(30, 204, 37, 0.4);
+}
+.resultsTable .incorrect {
+    background-color: rgba(222, 26, 26, 0.4);
+}
+.resultsTable select {
+    background-color:#fff;
+    font-size: 18px;
+    padding:6px;
+    margin:0 auto;
+    display:block;
+    width:60px;
+    height: 50px;
+    color:black;
+    border-radius: 10px;
+}
+
+#newRow {
+    margin-bottom: 20px;
+}
+
+#checkAnswers {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+select {
+    text-align: center;
+    text-align-last: center;
+}
+
+#errors {
+    font-weight: bold; 
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+}
+
+.optionsTable {
+    width:100%;
+    max-width: 400px;
+    margin: 0% auto;
+    text-align:center;
+    
+}
+
+.optionsTable th {
+    padding: 0;
+
+}
+.optionsTable th input[type="checkbox"] {
+    position: absolute;
+    top: -1000em;
+}
+
+.optionsTable label {
+    padding: 5px 10px;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.checkBox:checked + .labelForCheck {
+    background-color: rgba(30, 204, 37, 0.4);
+}
+
+
+
+.header {
+    font-size: 20px;
+    background-color: darkgrey;
+}

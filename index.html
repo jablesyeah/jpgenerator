@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <title>Random Japanese text generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div style="padding:5px;text-align:center;">
+  <h1>Japanese Generator</h1>
+</div>
+    
+<div style="overflow:auto">
+    <div>
+    <table class="optionsTable">
+            <tr>
+                <th colspan="2" class="header">Hiragana</th>
+                <th colspan="2" class="header">Gojuon</th>       
+            </tr>
+            <tr>
+                <th colspan="4">
+                    <input type="checkbox" class="checkBox" id="aRowCheck">
+                    <label class="labelForCheck" for="aRowCheck">A Row</label>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="checkbox" class="checkBox" id="kRowCheck">
+                    <label class="labelForCheck" for="kRowCheck">K</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="kYoon">
+                    <label class="labelForCheck" for="kYoon">+ Yoon</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="gRowCheck">
+                    <label class="labelForCheck" for="gRowCheck">G</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="gHan">
+                    <label class="labelForCheck" for="gHan">+ Han</label>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="checkbox" class="checkBox" id="sRowCheck">
+                    <label class="labelForCheck" for="sRowCheck">S</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="sYoon">
+                    <label class="labelForCheck" for="sYoon">+ Yoon</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="zRowCheck">
+                    <label class="labelForCheck" for="zRowCheck">Z</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="zHan">
+                    <label class="labelForCheck" for="zHan">+ Han</label>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="checkbox" class="checkBox" id="tRowCheck">
+                    <label class="labelForCheck" for="tRowCheck">T</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="tYoon">
+                    <label class="labelForCheck" for="tYoon">+ Yoon</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="dRowCheck">
+                    <label class="labelForCheck" for="dRowCheck">D</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="dHan">
+                    <label class="labelForCheck" for="dHan">+ Han</label>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="checkbox" class="checkBox" id="nRowCheck">
+                    <label class="labelForCheck" for="nRowCheck">N</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="nYoon">
+                    <label class="labelForCheck" for="nYoon">+ Yoon</label>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="checkbox" class="checkBox" id="hRowCheck">
+                    <label class="labelForCheck" for="hRowCheck">H</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="hYoon">
+                    <label class="labelForCheck" for="hYoon">+ Yoon</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="bpRowCheck">
+                    <label class="labelForCheck" for="bpRowCheck">B + P</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="bpHan">
+                    <label class="labelForCheck" for="bpHan">+ Han</label>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="checkbox" class="checkBox" id="mRowCheck">
+                    <label class="labelForCheck" for="mRowCheck">M</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="mYoon">
+                    <label class="labelForCheck" for="mYoon">+ Yoon</label>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="checkbox" class="checkBox" id="yRowCheck">
+                    <label class="labelForCheck" for="yRowCheck">Y</label>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="checkbox" class="checkBox" id="rRowCheck">
+                    <label class="labelForCheck" for="rRowCheck">R</label>
+                </th>
+                <th>
+                    <input type="checkbox" class="checkBox" id="rYoon">
+                    <label class="labelForCheck" for="rYoon">+ Yoon</label>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="checkbox" class="checkBox" id="wRowCheck">
+                    <label class="labelForCheck" for="wRowCheck">W</label>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <div class="menu">
+        <button id="optRomaji" onclick="romaji()" disabled>Romaji</button>
+        <button id="optHirigana" onclick="hirigana()" >Hirigana</button>
+        <button id="optBoth" onclick="both()">Both</button>
+        <select id="userInput">
+            <option value="1">1</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select>
+    </div>
+    <div class="main">
+        <button onclick="showArray()" id=newRow>New Row</button>
+        <h3 id=errors></h3>
+        <form class=form id="availableCharacters" hidden>
+            <select id="selectCharacter">
+            </select>
+        </form>
+        <table id=answersTable class=resultsTable></table>
+        <button id=checkAnswers onclick="showAnswers()" hidden >Show answers</button>
+    </div>
+</div>
+    <script src="japRandom.js"></script>
+</body>
+
+</html>
